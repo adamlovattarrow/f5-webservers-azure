@@ -1,23 +1,30 @@
-1. Clone this repo
-
-2. Log into the Azure web interface and create a storage account and container. NOTE! the storage account name  is global and must be unique
+1. Install the Azure CLI `https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 
 
-3. Edit providers.tf and change the following lines
+2. Install Terraform https://releases.hashicorp.com/terraform/0.14.5/terraform_0.14.5_windows_amd64.zip
+
+
+3. Open Powershell and run the command 'az login'
+
+
+4. Log into the Azure web interface and create a storage account and container. NOTE! the storage account name  is global and must be unique
+
+
+5. Edit providers.tf and change the following lines
 
     storage_account_name = "terraformbackendarrow1"
     container_name       = "tfstate"
 
    So they match the storage account name and container name you chose
 
-4. mkdir keys; cd keys; ssh-keygen (name key id-control_repo.rsa) 
+6. mkdir keys; cd keys; ssh-keygen (name key id-control_repo.rsa) 
 
-5. terraform init
+7. terraform init
 
-6. terraform apply
+8. terraform apply
 
-7. RDP to the jumphost using the credentials from the terraform output
+9. RDP to the jumphost using the credentials from the terraform output
 
-8. Open Firefox and go to https://10.1.20.103:8443
+10. Open Firefox and go to https://10.1.20.103:8443
 
-9. Configure the F5
+11. Configure the F5
